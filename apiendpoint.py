@@ -10,8 +10,10 @@ try:
         datos = respuesta.json()
 
         for atraccion in datos:
-            nombre = atraccion.get("name", "Nombre no disponible")
-            print(nombre)
+            name = atraccion.get("name", "Nombre no disponible")
+            id = atraccion.get("id")
+            population = atraccion.get("population", "Población no disponible")
+            print(f"ID: {id}, Nombre: {name}, Población: {population}")
 
     
     else:
